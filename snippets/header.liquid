@@ -1,0 +1,16 @@
+<header>
+  <h1>{{ shop.name }}</h1>
+
+  <nav class="flex justify-center p-6">
+      {% for link in linklists.main-menu.links %}
+        <a href="{{ link.url }}" class="">{{ link.title }}</a>
+      {% endfor %}
+  </nav>
+
+  {% if settings.show_search %}
+    <form action="/search">
+      <input type="search" name="q">
+      <button type="submit">Search</button>
+    </form>
+  {% endif %}
+</header>

@@ -1,1 +1,5 @@
-<h1>Hello world</h1>
+<h2>{{ collections['frontpage'].title }}</h2>
+
+{% for product in collections['frontpage'].products %}
+    {% render 'product-item', product: product %}
+{% endfor %}
